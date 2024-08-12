@@ -17,4 +17,4 @@ User Cards: Design and implement cards to display user information such as name,
 Responsive Design: Ensure the application is fully responsive and accessible across different devices and screen sizes.  
 
 ## **Milestone Structure**
-The project is divided into three milestones. After completing each milestone, a pull request should be submitted to receive feedback. Timely submission of pull requests is encouraged to benefit from continuous feedback throughout the project. If a milestone pull request is delayed, feedback will be provided only at the end of the project.
+The project is divided into three milestones. After completing each milestone, a pull request should be submitted to receive feedback. Timely submission of pull requests is encouraged to benefit from continuous feedback throughout the project. If a milestone pull request is delayed, feedback will be provided only at the end of the project. 
