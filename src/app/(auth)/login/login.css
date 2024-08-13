@@ -1,0 +1,57 @@
+
+.login-page {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.card-custom {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.card-title {
+  color: black;
+  font-weight: 700;
+}
+
+.card-text {
+  color: black;
+}
+
+.input-custom {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  color: black;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.button-custom {
+  background-color: #f09433;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.link-custom {
+  color: #f09433;
+  cursor: pointer;
+}
