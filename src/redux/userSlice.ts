@@ -6,6 +6,7 @@ interface User {
   name: string;
   profilePicture: string;
   statusMessage: string;
+  statusImage: string; // Add the new field for the status image
   friends: number[];
 }
 
@@ -26,11 +27,12 @@ const userSlice = createSlice({
     },
     setStatusMessage: (
       state,
-      action: PayloadAction<{ id: number; statusMessage: string }>
+      action: PayloadAction<{ id: number; statusMessage: string; statusImage: string }>
     ) => {
       const user = state.users.find((user) => user.id === action.payload.id);
       if (user) {
         user.statusMessage = action.payload.statusMessage;
+        user.statusImage = action.payload.statusImage; // Set the status image
       }
     },
     addFriend: (
@@ -46,4 +48,4 @@ const userSlice = createSlice({
 });
 
 export const { addUser, setStatusMessage, addFriend } = userSlice.actions;
-export default userSlice.reducer; 
+export default userSlice.reducer;
