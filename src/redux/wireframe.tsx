@@ -52,8 +52,6 @@ export slice.reducer and actions
 
  create the actual store with configureStore
  reducers: user->userReducer, auth->authReducer
-
-
  
  */ 
 

@@ -46,4 +46,4 @@ const userSlice = createSlice({
 });
 
 export const { addUser, setStatusMessage, addFriend } = userSlice.actions;
-export default userSlice.reducer;
+export default userSlice.reducer; 
