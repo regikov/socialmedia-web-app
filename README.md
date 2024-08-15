@@ -1,4 +1,6 @@
 # Social Network Management System
+
+
 ## **Project Overview:** <br>
 The Social Network Management System is a web application designed to manage users, set status messages, and connect users as friends—all within a local environment, without relying on external APIs. This application provides a platform where users can view and interact with a feed of status updates from themselves and their friends.
 
@@ -18,3 +20,51 @@ Responsive Design: Ensure the application is fully responsive and accessible acr
 
 ## **Milestone Structure**
 The project is divided into three milestones. After completing each milestone, a pull request should be submitted to receive feedback. Timely submission of pull requests is encouraged to benefit from continuous feedback throughout the project. If a milestone pull request is delayed, feedback will be provided only at the end of the project. 
+
+## **Folder Structure** 
+
+```1. FOLDER STRUCTURE 
+
+
+/social-web-app
+│
+├── /public
+│   ├── /images                        
+│    
+├── /README.md
+│ 
+├── /wireframes.ts
+│
+├── /src
+│   ├── /app                   
+│   │   ├── /(auth)                    
+│   │   │   ├── login                  
+│   │   │   │   └── page.tsx            
+│   │   │       └── login.module.css
+│   │   │   
+│   │   │   
+│   │   ├── /feed               
+│   │   │   └── page.tsx      
+│   │   ├── /profile            
+│   │   │   └── page.tsx        
+│   │   └── layout.tsx          
+│   │   └── PAGE.tsx           
+│   │
+│   ├── /components            
+│   │   ├── Navbar.tsx         
+│   │   ├── UserCard.tsx        
+│   │   └── StatusForm.tsx      
+│   │
+│   ├── /redux                  
+│   │   ├── authSlice.ts          
+│   │   ├── userSlice.ts    
+│   │   ├── store.ts    
+│   │
+│   ├── /styles                 
+│   │   ├── globals.css        
+│   │
+│   │
+......
+
+-----------------------------------------------------
+```
