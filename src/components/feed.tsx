@@ -8,6 +8,7 @@ interface FeedProps {
 }
 
 const Feed: React.FC<FeedProps> = ({ userId, filterUserId }) => {
+
   const userFriends = useSelector(
     (state: RootState) => state.user.users.find(user => user.id === userId)?.friends || []
   );
@@ -28,12 +29,12 @@ const Feed: React.FC<FeedProps> = ({ userId, filterUserId }) => {
           className="list-group-item d-flex align-items-center flex-column"
           style={{
             width: '100%',
-            maxWidth: '600px', // Make the card a bit smaller
-            margin: '0 auto 20px', // Add margin to space the items
-            padding: '15px', // Reduce padding
+            maxWidth: '600px', // Limit the width of the card
+            margin: '0 auto 20px', // Center the card and space them vertically
+            padding: '15px', // Adjust padding for better spacing
             borderRadius: '8px',
-            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-            backgroundColor: '#fff'
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)', // Subtle shadow for card depth
+            backgroundColor: '#fff', // White background for the card
           }}
         >
           <div className="d-flex align-items-center" style={{ width: '100%' }}>
@@ -41,7 +42,7 @@ const Feed: React.FC<FeedProps> = ({ userId, filterUserId }) => {
               src={user.profilePicture}
               alt={`${user.name}'s profile`}
               className="rounded-circle"
-              style={{ width: '40px', height: '40px', marginRight: '10px' }}
+              style={{ width: '40px', height: '40px', marginRight: '10px' }} // Small profile picture
             />
             <div style={{ flexGrow: 1 }}>
               <h6 className="mb-1" style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '16px' }}>
@@ -60,7 +61,7 @@ const Feed: React.FC<FeedProps> = ({ userId, filterUserId }) => {
             </div>
           </div>
 
-          {/* Display status image with a fixed size and margin */}
+          {/* If the user has a status image, show it below the text */}
           {user.statusImage && (
             <img
               src={user.statusImage}
@@ -68,11 +69,11 @@ const Feed: React.FC<FeedProps> = ({ userId, filterUserId }) => {
               className="mt-2"
               style={{
                 width: '100%',
-                maxWidth: '400px', // Keep the image size manageable
-                height: 'auto',
-                objectFit: 'cover',
-                borderRadius: '8px',
-                marginTop: '10px' // Reduce space above the image
+                maxWidth: '300px', // Keep image size manageable
+                height: 'auto', // Maintain aspect ratio
+                objectFit: 'fill',
+                borderRadius: '8px', // Rounded corners for the image
+                marginTop: '10px', // Space above the image
               }}
             />
           )}
