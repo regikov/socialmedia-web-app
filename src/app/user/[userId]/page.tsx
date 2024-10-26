@@ -77,7 +77,7 @@ const UserProfilePage: React.FC = () => {
                   marginBottom: '10px',
                 }}
               >
-                `${user.name} profile'
+                {user.name}
               </h2>
               <p
                 className="text-muted"
