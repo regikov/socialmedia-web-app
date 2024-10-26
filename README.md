@@ -14,7 +14,7 @@ Technologies used:
 - CSS + Bootstrap
 - Vercel
 
-You can view the deployed project [here.](socialmedia-web-app.vercel.app)
+You can view the deployed project [here.](https://socialmedia-web-app.vercel.app/)
 
 ## **Key Features**
 **1. User Management** <br> 
