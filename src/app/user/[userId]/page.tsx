@@ -69,14 +69,6 @@ const UserProfilePage: React.FC = () => {
             }}
           >
             <div className="text-center">
-              <Image
-                src={user.profilePicture }
-                alt={`${user.name}'s profile`}
-                className="img-fluid rounded-circle mb-3"
-                width={120}
-                height={120}
-                style={{ objectFit: 'cover' }}
-              />
               <h2
                 style={{
                   fontFamily: 'Montserrat, sans-serif',
