@@ -70,7 +70,7 @@ const UserProfilePage: React.FC = () => {
           >
             <div className="text-center">
               <Image
-                src={user.profilePicture}
+                src={user.profilePicture }
                 alt={`${user.name}'s profile`}
                 className="img-fluid rounded-circle mb-3"
                 width={120}
@@ -85,7 +85,7 @@ const UserProfilePage: React.FC = () => {
                   marginBottom: '10px',
                 }}
               >
-                {user.name}
+                `${user.name} profile'
               </h2>
               <p
                 className="text-muted"
@@ -106,7 +106,6 @@ const UserProfilePage: React.FC = () => {
                   marginBottom: '10px',
                 }}
               >
-                Manage Friends
               </h4>
               <div className="dropdown">
                 <button
