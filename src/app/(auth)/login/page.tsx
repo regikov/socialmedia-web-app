@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
@@ -54,7 +54,7 @@ const LoginPage: React.FC = () => {
           id,
           name: userName,
           profilePicture: profilePicture || "https://via.placeholder.com/150",
-          statusMessage: statusMessage || "Hello! I'm new here.",
+          statusMessage: statusMessage || "Hello! I&apos;m new here.",
           statusImage: statusImage || "https://via.placeholder.com/150", // New field for statusImage
           friends: [],
         })
@@ -89,7 +89,7 @@ const LoginPage: React.FC = () => {
                 </button>
               </div>
               <p className="text-center mt-4 card-text">
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <a
                   href="#!"
                   onClick={() => setIsLogin(false)}
@@ -133,7 +133,7 @@ const LoginPage: React.FC = () => {
               <div className="mb-3">
                 <input
                   type="text"
-                  placeholder="Status Image URL" // New input field for statusImage
+                  placeholder="Status Image URL"
                   value={statusImage}
                   onChange={(e) => setStatusImage(e.target.value)}
                   className="form-control form-control-lg input-custom"

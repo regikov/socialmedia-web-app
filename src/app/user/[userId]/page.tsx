@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '@/redux/store';
 import { addFriend } from '@/redux/userSlice';
 import "bootstrap/dist/css/bootstrap.min.css";
+import Image from 'next/image';
 
 const UserProfilePage: React.FC = () => {
   const { userId } = useParams();
@@ -61,18 +62,20 @@ const UserProfilePage: React.FC = () => {
               padding: '20px',
               marginRight: '20px',
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-              maxHeight: '400px', // Restrict height to make the container shorter
+              maxHeight: '400px', 
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
             }}
           >
             <div className="text-center">
-              <img
+              <Image
                 src={user.profilePicture}
                 alt={`${user.name}'s profile`}
                 className="img-fluid rounded-circle mb-3"
-                style={{ width: '120px', height: '120px', objectFit: 'cover' }} // Smaller profile image
+                width={120}
+                height={120}
+                style={{ objectFit: 'cover' }}
               />
               <h2
                 style={{
@@ -92,7 +95,7 @@ const UserProfilePage: React.FC = () => {
                   marginBottom: '20px',
                 }}
               >
-                "{user.statusMessage}"
+                &quot;{user.statusMessage}&quot;
               </p>
 
               <h4
