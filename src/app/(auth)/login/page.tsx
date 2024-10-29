@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
@@ -15,6 +14,7 @@ const LoginPage: React.FC = () => {
   const [userName, setUserName] = useState("");
   const [profilePicture, setProfilePicture] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
+  const [statusImage, setStatusImage] = useState(""); // New state for statusImage
   const [isLogin, setIsLogin] = useState(true);
   const [generatedUserId, setGeneratedUserId] = useState<number | null>(null);
   const dispatch = useDispatch();
@@ -32,11 +32,10 @@ const LoginPage: React.FC = () => {
 
   const handleLogin = () => {
     const id = parseInt(userId);
-    const userExists = store.getState().user.users.find(user => user.id === id);
+    const userExists = store.getState().user.users.find((user) => user.id === id);
     
     if (!isNaN(id) && userExists) {
       dispatch(login(id));
-      // Log the current state of the store
       const state = store.getState();
       console.log("User Exists, Current User ID:", state.auth.currentUserId);
       console.log("All Users in Store:", state.user.users);
@@ -54,9 +53,9 @@ const LoginPage: React.FC = () => {
         addUser({
           id,
           name: userName,
-          profilePicture:
-            profilePicture || "https://via.placeholder.com/150",
-          statusMessage: statusMessage || "Hello! I'm new here.",
+          profilePicture: profilePicture || "https://via.placeholder.com/150",
+          statusMessage: statusMessage || "Hello! I&apos;m new here.",
+          statusImage: statusImage || "https://via.placeholder.com/150", // New field for statusImage
           friends: [],
         })
       );
@@ -90,7 +89,7 @@ const LoginPage: React.FC = () => {
                 </button>
               </div>
               <p className="text-center mt-4 card-text">
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <a
                   href="#!"
                   onClick={() => setIsLogin(false)}
@@ -128,6 +127,15 @@ const LoginPage: React.FC = () => {
                   placeholder="Status Message"
                   value={statusMessage}
                   onChange={(e) => setStatusMessage(e.target.value)}
+                  className="form-control form-control-lg input-custom"
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  placeholder="Status Image URL"
+                  value={statusImage}
+                  onChange={(e) => setStatusImage(e.target.value)}
                   className="form-control form-control-lg input-custom"
                 />
               </div>

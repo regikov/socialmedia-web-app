@@ -2,7 +2,19 @@
 
 
 ## **Project Overview:** <br>
-The Social Network Management System is a web application designed to manage users, set status messages, and connect users as friends—all within a local environment, without relying on external APIs. This application provides a platform where users can view and interact with a feed of status updates from themselves and their friends.
+This is an eucational Social Media web application project designed to:  
+manage users, set status messages, and connect users as friends—all within a local environment, without relying on external APIs. 
+
+This application provides a platform where users can view and interact with a feed of status updates from themselves and their friends.
+
+Technologies used: 
+- TypeScript
+- NextJS 
+- HTML 
+- CSS + Bootstrap
+- Vercel
+
+You can view the deployed project [here.](https://socialmedia-web-app.vercel.app/)
 
 ## **Key Features**
 **1. User Management** <br> 
@@ -18,8 +30,66 @@ Filter by User: Enable filtering of the feed by a specific user's ID to see stat
 User Cards: Design and implement cards to display user information such as name, status message, and profile picture. <br>
 Responsive Design: Ensure the application is fully responsive and accessible across different devices and screen sizes.  
 
-## **Milestone Structure**
-The project is divided into three milestones. After completing each milestone, a pull request should be submitted to receive feedback. Timely submission of pull requests is encouraged to benefit from continuous feedback throughout the project. If a milestone pull request is delayed, feedback will be provided only at the end of the project. 
+## **Getting Started**
+
+### **Prerequisites**
+
+Make sure you have the following installed on your system:
+
+- TypeScript
+
+- Node.js (v14 or later) and npm (Node Package Manager)
+
+- Git (for cloning the repository)
+
+
+### **Installation Instructions**
+
+1. First, clone the project repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/socialmedia-web-app.git
+```
+
+2. Navigate to the Project Directory
+
+```bash
+cd socialmedia-web-app
+```
+
+3. Install the necessary npm packages:
+
+```bash
+npm install
+```
+
+### **Run the development server**
+
+Start the development server to view the project in your browser:
+
+```bash
+npm run dev
+```
+
+Once the server is running, open your browser and go to:
+
+```arduino
+http://localhost:3000
+```
+
+If you want to build the project for production, use the following command:
+
+```bash
+npm run build
+```
+After building, you can start the production server with:
+
+```bash
+npm start
+```
+
+Optionally, you can deploy your project on providers like Vercel. 
+[Here](https://vercel.com/docs/deployments/overview) you can see a detailed step by step of the process.
 
 ## **Folder Structure** 
 
